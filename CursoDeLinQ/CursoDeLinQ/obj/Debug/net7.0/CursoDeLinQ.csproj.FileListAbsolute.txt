@@ -1,0 +1,15 @@
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\bin\Debug\net7.0\CursoDeLinQ.exe
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\bin\Debug\net7.0\CursoDeLinQ.deps.json
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\bin\Debug\net7.0\CursoDeLinQ.runtimeconfig.json
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\bin\Debug\net7.0\CursoDeLinQ.dll
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\bin\Debug\net7.0\CursoDeLinQ.pdb
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\obj\Debug\net7.0\CursoDeLinQ.csproj.AssemblyReference.cache
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\obj\Debug\net7.0\CursoDeLinQ.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\obj\Debug\net7.0\CursoDeLinQ.AssemblyInfoInputs.cache
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\obj\Debug\net7.0\CursoDeLinQ.AssemblyInfo.cs
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\obj\Debug\net7.0\CursoDeLinQ.csproj.CoreCompileInputs.cache
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\obj\Debug\net7.0\CursoDeLinQ.dll
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\obj\Debug\net7.0\refint\CursoDeLinQ.dll
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\obj\Debug\net7.0\CursoDeLinQ.pdb
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\obj\Debug\net7.0\CursoDeLinQ.genruntimeconfig.cache
+D:\PROYECTOS\C#\CursoDeLinQ\CursoDeLinQ\obj\Debug\net7.0\ref\CursoDeLinQ.dll

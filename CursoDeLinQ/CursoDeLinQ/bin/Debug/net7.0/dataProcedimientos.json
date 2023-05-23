@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cardiología"
+    },
+    {
+        "id": 2,
+        "nombre": "Dermatología"
+    },
+    {
+        "id": 3,
+        "nombre": "Gastroenterología"
+    },
+    {
+        "id": 4,
+        "nombre": "Ginecología"
+    },
+    {
+        "id": 5,
+        "nombre": "Neurología"
+    },
+    {
+        "id": 6,
+        "nombre": "Oncología"
+    },
+    {
+        "id": 7,
+        "nombre": "Oftalmología"
+    },
+    {
+        "id": 8,
+        "nombre": "Ortopedia"
+    },
+    {
+        "id": 9,
+        "nombre": "Otorrinolaringología"
+    },
+    {
+        "id": 10,
+        "nombre": "Pediatría"
+    },
+    {
+        "id": 11,
+        "nombre": "Psiquiatría"
+    },
+    {
+        "id": 12,
+        "nombre": "Reumatología"
+    },
+    {
+        "id": 13,
+        "nombre": "Traumatología"
+    },
+    {
+        "id": 14,
+        "nombre": "Urología"
+    },
+    {
+        "id": 15,
+        "nombre": "Anestesiología"
+    },
+    {
+        "id": 16,
+        "nombre": "Cirugía General"
+    },
+    {
+        "id": 17,
+        "nombre": "Cirugía Maxilofacial"
+    },
+    {
+        "id": 18,
+        "nombre": "Cirugía Pediátrica"
+    },
+    {
+        "id": 19,
+        "nombre": "Cirugía Plástica"
+    },
+    {
+        "id": 20,
+        "nombre": "Cirugía Torácica"
+    },
+    {
+        "id": 21,
+        "nombre": "Cirugía Vascular"
+    },
+    {
+        "id": 22,
+        "nombre": "Endocrinología"
+    },
+    {
+        "id": 23,
+        "nombre": "Fisioterapia"
+    },
+    {
+        "id": 24,
+        "nombre": "Geriatría"
+    },
+    {
+        "id": 25,
+        "nombre": "Infectología"
+    },
+    {
+        "id": 26,
+        "nombre": "Medicointerna"
+    },
+    {
+        "id": 27,
+        "nombre": "Nefrología"
+    },
+    {
+        "id": 28,
+        "nombre": "Neumología"
+    },
+    {
+        "id": 29,
+        "nombre": "Nutrición"
+    },
+    {
+        "id": 30,
+        "nombre": "Odontología"
+    },
+    {
+        "id": 31,
+        "nombre": "Oncología Médica"
+    },
+    {
+        "id": 32,
+        "nombre": "Rehabilitación"
+    },
+    {
+        "id": 33,
+        "nombre": "Toxicología"
+    },
+    {
+        "id": 34,
+        "nombre": "Anatomía Patológica"
+    },
+    {
+        "id": 35,
+        "nombre": "Angiología"
+    },
+    {
+        "id": 36,
+        "nombre": "Bronconeumología"
+    },
+    {
+        "id": 37,
+        "nombre": "Cirugía Cardíaca"
+    },
+    {
+        "id": 38,
+        "nombre": "Cirugía Oral y Maxilofacial"
+    },
+    {
+        "id": 39,
+        "nombre": "Cirugía Pediátrica"
+    },
+    {
+        "id": 40,
+        "nombre": "Cirugía Reconstructiva"
+    },
+    {
+        "id": 41,
+        "nombre": "Cirugía Vascular"
+    },
+    {
+        "id": 42,
+        "nombre": "Dermatología y Venereología"
+    },
+    {
+        "id": 43,
+        "nombre": "Endocrinología y Nutrición"
+    },
+    {
+        "id": 44,
+        "nombre": "Gastroenterología y Hepatología"
+    },
+    {
+        "id": 45,
+        "nombre": "Genética Médica"
+    },
+    {
+        "id": 46,
+        "nombre": "Geriatría y Gerontología"
+    },
+    {
+        "id": 47,
+        "nombre": "Hematología y Hemoterapia"
+    },
+    {
+        "id": 48,
+        "nombre": "Infectología"
+    },
+    {
+        "id": 49,
+        "nombre": "Medicina de Urgencias"
+    },
+    {
+        "id": 50,
+        "nombre": "Medicina del Trabajo"
+    }
+]
