@@ -3,6 +3,7 @@ package com.base.Spring.Security.config.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -28,7 +29,13 @@ public class HttpSecurityConfig {
               .authenticationProvider( authenticationProvider )
               // Configuración de las rutas
               .authorizeHttpRequests( authReqConfig -> {
-                 
+                 // Unicas rutas que son publicas y cualquiera puede acceder
+                 authReqConfig.requestMatchers(HttpMethod.POST,"/auth/**").permitAll();
+
+                 // Todas las demas rutas estaran bloqueadas, necesitaran autenticacion
+                 authReqConfig.anyRequest().authenticated();
               })
+              .build();
+                 return filterChain;
    }
 }
