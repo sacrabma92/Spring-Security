@@ -13,6 +13,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.util.Optional;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -42,6 +44,11 @@ public class UserServiceImpl implements UserService {
         user.setRole(defaultRole);
 
         return userRepository.save(user);
+    }
+
+    @Override
+    public Optional<User> findOneByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
     // Validar password ingresados

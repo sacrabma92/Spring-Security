@@ -1,5 +1,6 @@
 package com.base.Spring.Security.service.auth;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
@@ -51,5 +52,20 @@ public class JwtService {
     private SecretKey generateKey(){
         byte[] passwordDecoded = Decoders.BASE64.decode(SECRET_KEY);
         return Keys.hmacShaKeyFor(passwordDecoded);
+    }
+
+    // Metodo que va a extraer el username y el Payload
+    public String extractUsername(String jwt){
+        // Extraemos todos los datos del claim y va a tomar quien es el propietario de los claims
+        return extractExtraClaims(jwt).getSubject();
+    }
+
+    // Metodo que va a validar el Payload del JWT
+    private Claims extractExtraClaims(String jwt) {
+        return Jwts.parser()
+                .verifyWith( generateKey() )
+                .build()
+                .parseSignedClaims(jwt)
+                .getPayload();
     }
 }
