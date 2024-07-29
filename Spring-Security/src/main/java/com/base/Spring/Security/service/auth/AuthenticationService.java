@@ -4,12 +4,14 @@ import com.base.Spring.Security.dto.Auth.AuthenticationRequest;
 import com.base.Spring.Security.dto.Auth.AuthenticationResponse;
 import com.base.Spring.Security.dto.RegisteredUser;
 import com.base.Spring.Security.dto.SaveUser;
+import com.base.Spring.Security.exception.ObjectNotFoundException;
 import com.base.Spring.Security.persistense.entity.security.User;
 import com.base.Spring.Security.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -88,5 +90,15 @@ public class AuthenticationService {
             System.out.println(e.getMessage());
             return false;
         }
+    }
+
+    public User findLoggedInUser(){
+        Authentication auth =
+                (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+
+        String username = (String) auth.getPrincipal();
+
+        return userService.findOneByUsername(username)
+                .orElseThrow(()-> new ObjectNotFoundException("User not found. Username " + username));
     }
 }

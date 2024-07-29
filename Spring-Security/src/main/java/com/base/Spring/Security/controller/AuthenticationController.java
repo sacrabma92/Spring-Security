@@ -2,6 +2,7 @@ package com.base.Spring.Security.controller;
 
 import com.base.Spring.Security.dto.Auth.AuthenticationRequest;
 import com.base.Spring.Security.dto.Auth.AuthenticationResponse;
+import com.base.Spring.Security.persistense.entity.security.User;
 import com.base.Spring.Security.service.auth.AuthenticationService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,10 @@ public class AuthenticationController {
       return ResponseEntity.ok(rsp);
    }
 
+   @GetMapping("/profile")
+   public ResponseEntity<User> findMyProfile(){
+      User user = authenticationService.findLoggedInUser();
+      return ResponseEntity.ok(user);
+   }
 
 }
