@@ -31,34 +31,36 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
    protected void doFilterInternal(HttpServletRequest request,
                                    HttpServletResponse response,
                                    FilterChain filterChain) throws ServletException, IOException {
-      // 1. Obtener encabezado HTTP llamado Authorization
+      // 1. Obtener encabezado HTTP Authorization
       String authorizationHeader = request.getHeader("Authorization"); // Bearer jwt
-      // Si esta vacio el jwt
+
+      // Si esta vacio el jwt o NO se encuentrar "Bearer " en el encabezado
       if(!StringUtils.hasText(authorizationHeader) || !authorizationHeader.startsWith("Bearer ")){
          filterChain.doFilter(request, response);
          return;
       }
 
-      // 2. Obtener token JWT desde el encabezado
+      // 2. Obtener la cadena de token del encabezado
       String jwt = authorizationHeader.split(" ")[1];
 
-      // 3. Obtener el Subject/username desde el token, esta accion valida el formato del token
-      // firma y fecha de expiración.
+      // 3. Obtener el Subject/username desde el token, esta acción valida el formato del token
+      // Firma y fecha de expiración
       String username = jwtService.extractUsername(jwt);
 
-      // 4. Setear el objeto authentication dentro de security Context Holder
-      UserDetails userDetails = userService.findOneByUsername(username)
+      // 4. Seter el objeto authentication dentro de security Context Holder
+      UserDetails user = userService.findOneByUsername(username)
               .orElseThrow(() -> new ObjectNotFoundException("User not found. Username: " + username));
+      // UsernamePasswordAuthenticationToken -> Recibe tres argumentos: Principal, Passowrd, Authorities.
+      // NO se le pasa el password por eso se coloca un null
       UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
-              username, null, userDetails.getAuthorities()
+              username, null, user.getAuthorities()
       );
-
-      // Me trae detalles de la session como la IP address etc..
-      authToken.setDetails( new WebAuthenticationDetails(request) );
+      // Me trae detalles de la sesion como IP address etc...
+      authToken.setDetails( new WebAuthenticationDetails(request));
 
       SecurityContextHolder.getContext().setAuthentication(authToken);
 
-      // 5. Ejecutar el registro de filtro
+      // 5. Ejecutar el registo de filtro
       filterChain.doFilter(request, response);
    }
 }

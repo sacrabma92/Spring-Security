@@ -47,7 +47,7 @@ public class User implements UserDetails {
                 .map(each -> each.getOperation().getName())
                 .map(each -> new SimpleGrantedAuthority(each))
                 .collect(Collectors.toList());
-        authorities.add(new SimpleGrantedAuthority("ROLE" + this.role.getName()));
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + this.role.getName()));
         return authorities;
     }
     // Obtenemos el password
